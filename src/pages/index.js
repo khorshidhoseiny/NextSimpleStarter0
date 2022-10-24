@@ -34,10 +34,26 @@ export default function Home({ todos }) {
       });
   };
 
+  const completedHandler = (id) => {
+    axios
+      .put(`api/todo/complete/${id}`)
+      .then((res) => {
+        console.log(res.data), "addtodo log res data";
+        setData(res.data.todos);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <Layout>
       <TodoForm onAdd={addNewTodo} />
-      <TodoList data={data} onDelete={deleteTodos} />
+      <TodoList
+        data={data}
+        onComplete={completedHandler}
+        onDelete={deleteTodos}
+      />
     </Layout>
   );
 }

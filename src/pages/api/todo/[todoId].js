@@ -15,6 +15,7 @@ export default async function handler(req, res) {
     const {body}=req;
     todo.title=body.todo.title;
     todo.desc=body.todo.desc;
+    todo.isCompleted=body.todo.isCompleted;
     await todo.save();
     const todos=await Todo.find({});
     return res.status(200).json({message:"todo successfuly updated",todos}); 
