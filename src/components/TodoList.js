@@ -35,11 +35,11 @@ const TodoList = ({ data, onDelete, onComplete }) => {
             <div className="mx-5 p-1 flex justify-center items-center">
               <TrashIcon
                 onClick={() => onDelete(t._id)}
-                className="stroke-red-500 w-6"
+                className="stroke-red-500 cursor-pointer w-6"
               />
               <button onClick={() => onComplete(t._id)} className="">
                 {!t.isCompleted ? (
-                  <span className="rounded-full border border-slate-600 flex justify-center items-center mx-3 h-5 w-5"></span>
+                  <span className="rounded-md border border-slate-600 flex justify-center items-center mx-3 h-5 w-5"></span>
                 ) : (
                   <CheckIcon className="stroke-green-500 mx-2 w-6" />
                 )}
