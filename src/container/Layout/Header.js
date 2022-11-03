@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <section className="flex justify-between w-full px-3 items-center h-12 p-1 shadow-md bg-white text-bold text-gray-500">
-      <h1 className="">todolist | NextJs</h1>
+      <h1 className="font-bold">todolist | NextJs</h1>
       <nav className="flex justify-end ">
         <ul className="w-full flex pr-3 ">
           <li className="mx-1">
@@ -21,6 +21,7 @@ const Header = () => {
             </a>
             </Link>
           </li>
+
           <li className="mx-1">
             <Link href={"/Protected-ssr"}>
             <a>
